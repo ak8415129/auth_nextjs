@@ -8,7 +8,7 @@ export default function UserProfile({params}:any){
             <hr />
             <p className="text-4xl"> Profile Page 
              {/* <span className=" p-2 rounded bg-black"> {params.id} </span>    */}
-            <span> {id} </span>
+            <span className='p-2 rounded bg-black'> {id} </span>
             </p>
             
 
