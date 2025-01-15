@@ -6,7 +6,7 @@ import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation"; 
 export default function ProfilePage(){ 
     const router=useRouter(); 
-    const [data, setData] = useState("nothing")
+    const [data, setData] = useState("click to see user name")
    const logout= async()=>{ 
     try { 
         await axios.get('/api/users/logout');
@@ -24,7 +24,7 @@ export default function ProfilePage(){
    const getUserDetails = async () => {
     const res = await axios.get('/api/users/me')
     console.log(res.data);
-    setData(res.data.data._id) 
+    setData(res.data.data.username) 
    }
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
